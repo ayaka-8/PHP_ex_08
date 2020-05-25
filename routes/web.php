@@ -17,18 +17,13 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create','Admin\NewsController@add')->middleware('auth');
-});
-
-//課題4
-//課題12(middleware追加)
-Route::group(['prefix' => 'admin'], function() {
+    Route::post('news/create', 'Admin\NewsController@create');
+    
     Route::get('profile/create','Admin\ProfileController@add')->middleware('auth');
+    Route::post('profile/create','Admin\ProfileController@create');
     Route::get('profile/edit','Admin\ProfileController@edit')->middleware('auth');
+    Route::post('profile/edit','Admin\ProfileController@update');
 });
-
-//課題3 
-Route::get('/XXX', 'AAAController@bbb');
-
 
 Auth::routes();
 
