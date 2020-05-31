@@ -6,6 +6,9 @@
         <div class="row">
             <h2>ユーザー一覧</h2>
         </div>
+        <div class="col-md-4">
+                <a href="{{ action('Admin\ProfileController@add') }}" role="button" class="btn btn-primary">新規登録</a>
+        </div>
         <hr color="#c0c0c0">
             <div class="row">
                 <div class="profiles col-md-8 mx-auto mt-3">
