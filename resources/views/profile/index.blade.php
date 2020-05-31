@@ -13,20 +13,18 @@
                         <div class="profile">
                             <div class="row">
                                 <div class="text col-md-6">
-                                    <div class="title">
+                                    <div class="name">
                                         <p>氏名　{{ $profile->name }}</p>
                                     </div>
                                     <div class="date">
                                         <p>更新日　{{ $profile->updated_at->format('Y年m月d日') }}</p>
                                     </div>
-                                
                                 </div>
-                            
                             </div>
                         </div>
                         <hr color="#c0c0c0">
                     @endforeach
                 </div>
             </div>
-    </div>
+        </div>
 @endsection

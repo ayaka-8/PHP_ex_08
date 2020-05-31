@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
-
 use App\Profile;
 
 class ProfileController extends Controller
@@ -15,8 +13,6 @@ class ProfileController extends Controller
         if (empty($profiles)) {
             abort(404);
         }
-        
-        
         return view('profile.index', ['profiles' => $profiles]);
     }
 }
